@@ -119,7 +119,7 @@ export const LEGIT_DOMAINS = [
 ];
 
 export const INSTAGRAM_WHITELIST = [
-    // Government & Official
+    // --- UAE GOVERNMENT & OFFICIAL ---
     "uaegov",
     "wamnews",
     "dxbmediaoffice",
@@ -134,44 +134,129 @@ export const INSTAGRAM_WHITELIST = [
     "mofaic",
     "mofa",
     "gdrfadubai",
-    "hhshkmohd",
-    "faz3",
-    "mohamedbinzayed",
+    "hhshkmohd", // Sheikh Mohammed
+    "faz3",      // Sheikh Hamdan
+    "mohamedbinzayed", // MBZ
     "ncemauae",
     "gcaauae",
     "tdra_uae",
+    "adpolicehq",
+    "dubaipolicehq",
+    "dha_dubai",
+    "rta_dubai",
 
-    // News Agencies & Portals
+    // --- UAE NEWS & MEDIA ---
     "khaleejtimes",
     "gulfnews",
+    "thenationalnews_uae",
     "thenationalnews",
-    "thenationalnews.uae",
     "emaratalyoum",
     "albayan_news",
-    "alkhaleej.ae",
+    "alkhaleej",
     "alittihad_news",
     "emirates247",
     "arabianbusiness",
     "alarabiya",
     "alarabiya_eng",
-    "aljazeera",
-    "aljazeeraenglish",
-    "middleeasteye",
     "uae_barq",
     "sharjahnews",
     "7news.uae",
     "skynewsarabia",
     "admedia",
+    "lovindubai",
+    "lovinsarjah",
+    "lovinaqu",
+    "abudhabievents",
+    "visitdubai",
 
-    // Key Entities
+    // --- INTERNATIONAL NEWS AGENCIES ---
+    "reuters",
+    "apnews",
+    "afpnews",
+    "agencefrancepresse",
+    "bloomberg",
+    "bloombergquicktake",
+    "bloombergbusiness",
+
+    // --- INTERNATIONAL BROADCASTERS ---
+    "bbcnews",
+    "bbccworld",
+    "bbcpersian",
+    "bbcnewsarabic",
+    "cnn",
+    "cnnarabic",
+    "cnninternational",
+    "cnnee", // CNN en Español
+    "aljazeera",
+    "aljazeeraenglish",
+    "ajplus",
+    "skynews",
+    "skynewsarabia",
+    "france24",
+    "france24_en",
+    "france24_ar",
+    "dw.news",
+    "dwnews",
+    "euronews.tv",
+    "euronews_english",
+    "rt",
+    "trtworld",
+    "msnbc",
+    "abcnews",
+    "cbsnews",
+    "nbcnews",
+
+    // --- MAJOR INTERNATIONAL NEWSPAPERS ---
+    "nytimes",
+    "wsj",
+    "washingtonpost",
+    "theguardian",
+    "telegraph",
+    "independent",
+    "financialtimes",
+    "economist",
+    "the_economist",
+    "forbes",
+    "time",
+    "newsweek",
+    "theatlantic",
+    "newyorkermag",
+    "wallstreetjournal",
+    "dailymail",
+    "thesun",
+    "mirrorceleb",
+    "evening.standard",
+
+    // --- MIDDLE EAST & REGIONAL NEWS ---
+    "middleeasteye",
+    "middleeastmonitor",
+    "arabnews",
+    "asharqalawsat",
+    "malloftheemirates",
+    "thenationalnews_uae",
+    "thenationaluae",
+
+    // --- TECH & SPECIALIZED NEWS ---
+    "theverge",
+    "wired",
+    "techcrunch",
+    "nature.research",
+    "science",
+    "natgeo",
+    "natgeotravel",
+    "nasa",
+
+    // --- KEY UAE ENTITIES ---
     "etisalat",
     "dutweets",
     "uaepass.ae",
     "dubai",
-    "visitdubai",
     "abudhabi",
     "uaeproject",
-    "expoCityDubai"
+    "expoCityDubai",
+    "cop28uaeofficial",
+    "emirates",
+    "etihad"
 ];
 
 export const isLegitURL = (url: string): boolean => {
@@ -185,7 +270,6 @@ export const isLegitURL = (url: string): boolean => {
             if (pathSegments.length === 1) {
                 return INSTAGRAM_WHITELIST.includes(pathSegments[0].toLowerCase());
             }
-            // For posts/reels, return false for now (frontend will trigger server-side verification)
             return false;
         }
 
